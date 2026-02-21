@@ -1,0 +1,69 @@
+# HOW TO RUN THE PROJECT & REQUIRED SOFTWARE
+
+## SOFTWARE REQUIREMENTS
+
+To develop and run this project, make sure you have the following software installed on your computer:
+
+1. **Node.js (LTS version recommended)**
+   - Used for running the Next.js frontend and installing dependencies.
+   - Download from: https://nodejs.org/
+   - Ensure you install a version >= 18.x.x
+
+2. **Git (Version Control)**
+   - Used for cloning the project, if necessary.
+   - Download from: https://git-scm.com/ 
+
+3. **Code Editor**
+   - We strongly recommend Visual Studio Code (VS Code).
+   - Download from: https://code.visualstudio.com/
+
+4. **A Web Browser**
+   - Google Chrome, Firefox, Safari, or Microsoft Edge.
+
+---
+
+## HOW TO RUN THE FRONTEND LOCALLY
+
+The frontend is completely decoupled. You can copy the `frontend` folder to any machine and run it independently.
+
+### Step 1: Open the Frontend Folder
+1. Open your terminal or command prompt.
+2. Navigate into the `frontend` folder:
+   ```bash
+   cd frontend
+   ```
+
+### Step 2: Install Dependencies 
+*If you just copied the folder to a new computer, you must install the node modules first.*
+Run this command:
+```bash
+npm install
+```
+
+### Step 3: Start the Development Server
+Run this command to start the Next.js server locally:
+```bash
+npm run dev
+```
+
+### Step 4: View the App Server
+Open your web browser and go to:
+http://localhost:3000
+
+---
+
+## HOW TO RUN THE BACKEND (Supabase Setup)
+
+The backend is intended to be hosted on Supabase as per our technical stack. You don't "run" the backend locally like the frontend right now, but you will need to set up Supabase and link it to the frontend via Environment Variables.
+
+### Setup Instructions
+1. Go to https://supabase.com/ and create a free account/project.
+2. Get your **Project URL** and **Anon API Key** from the Project Settings -> API.
+3. In your `frontend` folder, create a new file called `.env.local`.
+4. Add the Supabase credentials to the file:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_project_url_here
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_api_key_here
+   ```
+
+*(Later, if we move to a custom Node.js/NestJS backend, these instructions will be updated to include commands like `npm run start` in the `backend` folder).*

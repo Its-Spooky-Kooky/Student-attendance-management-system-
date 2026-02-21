@@ -1,0 +1,79 @@
+# TO-DO LIST: STUDENT ATTENDANCE MANAGEMENT SYSTEM
+
+Based on the Product Requirements Document (PRD), Design specifications, and Tech Stack, here is the step-by-step roadmap to build the project:
+
+## PHASE 1: PROJECT INITIALIZATION & INFRASTRUCTURE
+[ ] 1. Initialize Frontend Repository
+    - Set up Next.js (App Router) with React and TypeScript.
+    - Install and configure Tailwind CSS.
+    - Initialize ShadCN UI for UI components.
+    - Install state management (Zustand) and charting library (Recharts).
+[ ] 2. Initialize Backend (Supabase)
+    - Create a Supabase project.
+    - Set up PostgreSQL Database and run schema migrations.
+    - Create core tables: Users, Students, Departments, Classes, Attendance, AttendanceLogs, RiskFlags.
+    - Configure Supabase Auth (Email/Password, Role-based).
+    - Set up Row-Level Security (RLS) policies for different roles (Admin, Teacher, Student).
+
+## PHASE 2: DESIGN SYSTEM & THEMING
+[ ] 3. Implement Global Styles
+    - Configure Tailwind custom theme with specified color palette (Primary, Success, Warning, Danger, Background, Surface).
+    - Set up typography scales (H1 to Caption).
+    - Implement the spacing (4px multiples) and radius (12px, 16px, 8px, 20px) specific tokens.
+    - Add the custom shadow system for both Light and Dark modes.
+[ ] 4. Theme Toggling
+    - Implement perfect Light/Dark Mode toggle.
+    - Ensure CSS variables are used for zero-recoding theme changes.
+    - Add LocalStorage persistence and OS preference detection.
+
+## PHASE 3: CORE APP LAYOUT & AUTHENTICATION
+[ ] 5. Authentication Flow
+    - Build Login screens.
+    - Implement role-based routing protecting Admin, Teacher, and Student routes.
+[ ] 6. Dashboard Layout Shell
+    - Build the 3-Column Grid Layout.
+    - Implement Sidebar Navigation (200px wide).
+    - Create the Main Content flexible area.
+    - Create the Quick Stats Cards section on the right.
+
+## PHASE 4: ATTENDANCE MARKING (CORE FEATURE)
+[ ] 7. Marking Interface (UI)
+    - Build the Fullscreen Modal for the marking screen.
+    - Implement the Student Grid (3-column cards) with states (Present, Absent, Pending, Marking).
+    - Build Top Class Details + Timer and Bottom Progress Bar.
+[ ] 8. Hybrid Attendance Capture (Logic)
+    - Integrate Facial Recognition (Primary) using browser WebRTC & TensorFlow.js (or similar).
+    - Implement QR Code Generation (Fallback) that regenerates per class.
+    - Create the Manual Marking (Emergency) checkbox-based interface.
+[ ] 9. Real-Time Sync
+    - Connect the marking interface to Supabase to save records.
+    - Use Supabase Realtime to update dashboards instantly for admins/faculty.
+
+## PHASE 5: REAL-TIME DASHBOARDS & ANALYTICS
+[ ] 10. Dashboard Overview Components
+    - Build Hero Header ("Today's Attendance").
+    - Implement 4 KPI Cards connected to live data.
+    - Build Recent Activity Table (last 10 classes).
+[ ] 11. Analytics Dashboard
+    - Build Analytics Page layout with Filters & Controls.
+    - Implement Attendance Trend Line Chart (7-day trend) using Recharts.
+    - Implement Department Comparison Bar Chart.
+    - Implement At-Risk Students Doughnut Chart and Weekly Heatmap.
+
+## PHASE 6: NOTIFICATIONS & COMPLIANCE
+[ ] 12. Automated Parent Notifications
+    - Integrate WhatsApp Business API (or Twilio SMS as fallback).
+    - Create triggers for Same-day absence, weekly summary, and attendance milestones.
+[ ] 13. Policy Engine & Compliance
+    - Implement 75% minimum attendance logic tracking.
+    - Build automated AICTE compliance report generation.
+    - Create the Student Dispute Management System logic.
+
+## PHASE 7: TESTING & DEPLOYMENT
+[ ] 14. Quality Assurance
+    - Test facial recognition under various browser/camera conditions.
+    - Test offline/QR and manual fallback workflows.
+    - Verify role-based access control and RLS.
+[ ] 15. Deployment
+    - Deploy Next.js frontend to Vercel.
+    - Ensure production Supabase configuration and env variables are set securely.

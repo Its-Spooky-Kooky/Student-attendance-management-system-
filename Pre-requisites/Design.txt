@@ -1,0 +1,130 @@
+📐 DESIGN DOCUMENT - STUDENT ATTENDANCE MANAGEMENT SYSTEM
+Version: 1.0 | Date: February 21, 2026 | Designer: Perplexity AI Design Team
+
+🎨 DESIGN INSPIRATION ANALYSIS
+Reference: FinTech UI Dribbble Shot
+​
+Key Design Characteristics Captured:
+
+Modern neumorphism with subtle shadows and gradients
+
+Clean card-based layout with rounded corners (24px radius)
+
+Bold typography - 600/700 weights for headings
+
+Primary blue palette (#1E3A8A, #3B82F6) with accent teal (#10B981)
+
+Glassmorphism effects - subtle backdrop blur
+
+Micro-interactions - hover states, loading animations
+
+Data-dense dashboards with charts, KPIs, and tables
+
+🎯 DESIGN SYSTEM SPECIFICATIONS
+1. COLOR PALETTE
+Role	Light Mode	Dark Mode	Hex Values
+Primary	#1E40AF	#3B82F6	Primary Blue
+Primary Hover	#1E3A8A	#2563EB	Primary Blue Dark
+Success	#10B981	#059669	Teal Green
+Warning	#F59E0B	#D97706	Amber
+Danger	#EF4444	#DC2626	Red
+Background	#F8FAFC	#0F172A	BG Primary
+Surface	#FFFFFF	#1E293B	Cards/Surfaces
+Surface Hover	#F1F5F9	#334155	Card Hover
+Text Primary	#1E293B	#F1F5F9	Main Text
+Text Secondary	#64748B	#94A3B8	Secondary Text
+2. TYPOGRAPHY SCALE
+Scale	Light	Dark	Weight	Line Height
+H1 - Dashboard Title	32px	32px	700	1.2
+H2 - Section Title	24px	24px	600	1.3
+H3 - Card Title	20px	20px	600	1.4
+H4 - Table Header	16px	16px	600	1.4
+Body Large	16px	16px	500	1.5
+Body	14px	14px	500	1.6
+Caption	12px	12px	400	1.6
+3. SPACING SYSTEM
+text
+Scale: 4px multiples
+xs: 4px, s: 8px, m: 12px, l: 16px, xl: 20px, 2xl: 24px, 3xl: 32px, 4xl: 40px, 5xl: 48px
+4. RADIUS SYSTEM
+text
+Container: 12px, Card: 16px, Button: 8px, Modal: 20px
+5. SHADOW SYSTEM
+text
+Light Mode:
+sm: 0 1px 2px 0 rgb(0 0 0 / 0.05)
+md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)
+lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)
+
+Dark Mode:
+sm: 0 1px 3px 0 rgb(0 0 0 / 0.3)
+md: 0 4px 6px -1px rgb(0 0 0 / 0.25), 0 2px 4px -2px rgb(0 0 0 / 0.25)
+lg: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2)
+📱 KEY SCREENS & COMPONENTS
+1. DASHBOARD OVERVIEW
+text
+Layout: 3-Column Grid
+Left: Sidebar Navigation (200px)
+Middle: Main Content (flexible)
+Right: Quick Stats Cards (320px)
+
+Key Components:
+├── Hero Header: "Today's Attendance" + Date + Filter
+├── Live Stats: 4 KPI Cards (Present, Absent, Late, Pending)
+├── Attendance Chart: Line chart (7-day trend)
+├── Recent Activity: Table (last 10 classes)
+└── Quick Actions: Mark Attendance, View Reports
+2. ATTENDANCE MARKING SCREEN
+text
+Layout: Fullscreen Modal / Full Page
+Top: Class Details + Timer
+Center: Student Grid (3-column cards)
+Bottom: Progress Bar + Actions
+
+Student Card States:
+✅ Present (Green bg)
+❌ Absent (Red bg)
+⏳ Pending (Gray bg)
+🔄 Marking... (Loading spinner)
+3. ANALYTICS DASHBOARD
+text
+Layout: 2-Column + Charts
+Left: Filters + Controls
+Right: Charts + Tables
+
+Charts:
+- Attendance Trend (Line chart)
+- Department Comparison (Bar chart)
+- At-Risk Students (Doughnut chart)
+- Heatmap (Weekly patterns)
+
+
+🚀 KEY DESIGN HIGHLIGHTS
+✅ Implemented Features:
+Perfect Light/Dark Mode Toggle - Sun/Moon icons, smooth animations
+
+CSS Custom Properties - Zero recoding needed for theme changes
+
+LocalStorage Persistence - Remembers user preference
+
+System Preference Detection - Respects OS dark mode setting
+
+FinTech-Inspired Design - Neumorphism, gradients, glassmorphism
+​
+
+Fully Responsive - Mobile-first design
+
+Micro-interactions - Hover effects, smooth transitions
+
+Dashboard Demo - Live attendance stats cards
+
+🎨 Design System Ready For:
+text
+✅ Complete color palette (10+ colors)
+✅ Typography scale (7 sizes)
+✅ Spacing system (4px multiples)
+✅ Shadow system (light/dark variants)
+✅ Border radius consistency
+✅ Component states (hover, active, focus)
+✅ Accessibility (WCAG AA compliant)
+✅ Performance optimized (GPU accelerated)
